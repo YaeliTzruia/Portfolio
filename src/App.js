@@ -1,21 +1,44 @@
-import React, { useContext } from "react";
-import { ChakraProvider, Box, theme, Flex } from "@chakra-ui/react";
-import LandingPage from "./pages/LandingPage";
-import useLanguage from "./hooks/useLanguage";
+import React from "react";
+import { ChakraProvider, Flex } from "@chakra-ui/react";
+
+import "./styles/style.css";
+import Header from "./sections/Header";
 import Navbar from "./misc/Navbar";
-import { colors } from "./styles/colors";
+import theme from "./styles/themes";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Services from "./sections/Services";
+import Portfolio from "./sections/Portfolio";
+import Testimonials from "./sections/Testimonials";
+import Contact from "./sections/Contact";
+import Footer from "./misc/Footer";
+
+import AppButton from "./components/AppButton";
+import AppButtonPrimary from "./components/AppButtonPrimary";
 
 function App() {
-  const { language } = useLanguage;
-
   return (
     <ChakraProvider theme={theme}>
-      <Box backgroundColor={colors.pearlWhite}>
-        {/* <div dir={language.side}> */}
+      <Flex
+        marginTop="4rem"
+        w="100%"
+        justifyContent="center"
+        alignItems="center"
+        flexDir="column"
+        paddingTop="7rem"
+        overflow="hidden"
+      >
         <Navbar />
-        <LandingPage />
-        {/* </div> */}
-      </Box>
+        <Header />
+        <About />
+
+        <Experience />
+        <Services />
+        <Portfolio />
+        {/* <Testimonials />
+        <Contact />
+        <Footer /> */}
+      </Flex>
     </ChakraProvider>
   );
 }

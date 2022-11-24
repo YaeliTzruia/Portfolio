@@ -1,7 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-</style>;
+import { colors } from "./colors";
 
 const activeLabelStyles = {
   transform: "scale(0.9) translateY(-24px)",
@@ -9,24 +7,49 @@ const activeLabelStyles = {
 };
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      "html, body": {
+        color: colors.white,
+        lineHeight: "tall",
+        margin: "0px",
+        padding: "0px",
+        backgroundColor: colors.background,
+      },
+      h1: {
+        // you can also use responsive styles
+        fontSize: ["48px", "72px"],
+        fontWeight: "bold",
+        lineHeight: "110%",
+        letterSpacing: "-2%",
+      },
+      h2: {
+        fontSize: ["36px", "48px"],
+        fontWeight: "semibold",
+        lineHeight: "110%",
+        letterSpacing: "-1%",
+      },
+      h5: {
+        fontWeight: "500",
+        color: colors.light,
+      },
+      // section: { marginTop: "8rem" },
+    },
+    //   a: {
+    //     color: colors.primary,
+    //     transition: "all 400ms ease",
+    //   },
+  },
+
   fonts: {
     heading: `'Lato', sans-serif`,
     body: `'Lato', sans-serif`,
   },
   direction: "rtl",
+
   colors: {
-    black: { 50: "#000000ad" },
-    green: { 50: "#A2B7AF", 100: "#759084" },
-    beige: { 50: "#F7F6F5", 100: "#F2EEE9" },
-    // gray: { 50: "#80808042", 100: "#CECECE", 200: "#b9b9b9" },
-    // purple: { 50: "#4E67EB", 100: "#5764d8" },
-    // white: { 50: "#FFFFFF" },
-    // red: { 50: "#be0000bf", 100: "#be0000", 300: "#686868" },
+    primary: "#4db5ff",
   },
-  // fonts: {
-  //   heading: 'Lato',
-  //   body: 'Lato',
-  // },
 
   components: {
     Form: {
@@ -60,6 +83,12 @@ const theme = extendTheme({
       },
     },
   },
+  breakpoints: {
+    sm: "22.563em",
+    md: "25.9em",
+    lg: "80.5em",
+    xl: "120em",
+  },
 });
 
 export default theme;
@@ -67,3 +96,5 @@ export default theme;
 // md: "414px",
 // lg: "1366px",
 // xl: "1920px",
+
+//all headers 2 & 5 inside the sections will have the color light

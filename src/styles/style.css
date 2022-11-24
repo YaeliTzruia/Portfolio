@@ -1,0 +1,55 @@
+* {
+  outline: 0;
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+body {
+  line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: "2.5rem";
+}
+h5 {
+  font-weight: "500";
+}
+
+svg {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.me-pic {
+  background: linear-gradient(to bottom, #1f1f38 0%, #1f1f38 80%);
+}
+.about_me {
+  aspect-ratio: 1/1;
+  background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+  display: grid;
+  place-items: center;
+}
+.about-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* transition="all 400ms ease" */

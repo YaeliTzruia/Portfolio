@@ -1,36 +1,34 @@
-import { FaGithub, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
-import { Box, Button, color, Flex } from "@chakra-ui/react";
-import NavbarLink from "../components/NavbarLink";
-import "../styles/styles.css"
+import { Box, Flex } from "@chakra-ui/react";
+import AppIconLink from "../components/AppIconLink";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai"
+import { BiBook, BiMessageSquareDetail } from "react-icons/bi"
+import { RiServiceLine } from "react-icons/ri"
 import { colors } from "../styles/colors";
+import { useState } from "react";
 
 
+// Make a map function! 
+//mage sure the active design works!
 
-export default function Navbar({ text }) {
+export default function Navbar() {
 
+    const [acctive, setAcctive] = useState(null)
+
+    const icons = [{ image: <AiOutlineHome />, id: 10, href: "#" }, { image: <AiOutlineUser />, id: 20, href: "#about" }, { image: <BiBook />, id: 30, href: "#experience" }, { image: <RiServiceLine />, id: 40, href: "#services" }, { image: <BiMessageSquareDetail />, id: 50, href: "#contact" }]
 
     return (
-        <Flex boxShadow="0 1px 7px 2px #80808024" backgroundColor="white" justifyContent="center" align="center" w="100%" h="60px">
-            <Flex w="100%" justifyContent="space-between" >
-                <Flex justifyContent="center" alignItems="center" w="15%" >
-                    <Flex marginLeft="10%" w="90%" justifyContent="space-between">
-                        {/* <FaGithub className="icon" />
-                        <FaLinkedin className="icon" />
-                        <FaRegEnvelope className="icon" /> */}
-                    </Flex>
+        <Flex backdropFilter="blur(15px)" borderRadius="3rem" gap="0.8rem" bottom="2rem" left="50%" position="fixed" zIndex={2} paddingY="0.7rem" paddingX="1.7rem" width="fit-content" transform="translateX(-50%)" backgroundColor={colors.backgroundNav}>
+            {icons.map((item) => <AppIconLink key={item.id}
+                onclick={() => {
+                    setAcctive(item.id)
+                }} target="_self"
+                _hover={"rgba(0,0,0,0.4)"} fontSize="1.1rem" color={colors.light} backgroundColor="transparent" padding="0.8rem" href={item.href} icon={item.image} />
+            )}
 
-                </Flex>
-                <Flex w="70%" align="center" justifyContent="center">
-                    <Flex align="center" justifyContent="space-between" width="30%">
-                        <NavbarLink text="Home" />
-                        <NavbarLink text="About" />
-                        <NavbarLink text="Projects" />
-                    </Flex>
-                </Flex>
-                <Flex justifyContent="space-around" w="15%">
-                    <Button fontWeight="5%" cursor="pointer" backgroundColor={colors.turquoise} color={colors.white} _hover={{ backgroundColor: "#07b7fd54", color: "#181818c2" }} w="80%">Download Resume</Button>
-                </Flex>
-            </Flex>
-        </Flex >
+
+
+        </Flex>
     )
+    // style={{ color: acctive === item.href ? colors.background : colors.light, backgroundColor: acctive === item.id ? colors.background : "transparent" }}
 }
+

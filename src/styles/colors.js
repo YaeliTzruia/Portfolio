@@ -1,8 +1,10 @@
 export const colors = {
-  turquoise: "#07b7fd99",
-  lightBlue: "#07b7fd54",
-  white: "#ffffff",
-  black: "#181818c2",
-  pearl: "#f3f2ef",
-  pearlWhite: "#f3f2ef4a",
+  background: "#1f1f38",
+  backgroundNav: "rgba(0,0,0,0.3)",
+  backgroundVariant: "#2c2c6c",
+  primary: "#4db5ff",
+  primaryLight: "#96cdf4",
+  primaryVariant: "rgba(77,181,255,0.4)",
+  white: "#fffffff7",
+  light: "rgba(255,255,255,0.6)",
 };
