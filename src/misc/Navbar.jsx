@@ -5,6 +5,7 @@ import { BiBook, BiMessageSquareDetail } from "react-icons/bi"
 import { RiServiceLine } from "react-icons/ri"
 import { colors } from "../styles/colors";
 import { useState } from "react";
+import { Tooltip } from '@chakra-ui/react'
 
 
 // Make a map function! 

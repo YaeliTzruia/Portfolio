@@ -37,8 +37,8 @@ export default function Experience() {
     return (
 
         <Flex w={["90%", "86%", "75%", "75%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]} marginTop="2rem"
-            position="absolute" flexDir="column" display="column" top={["130rem", "130rem", "100rem", "100rem"]} id="experience">
-            <Flex marginTop="2rem" marginBottom={["0", "0", "5rem", "5rem"]} flexDir="column" textAlign="center">
+            position="absolute" flexDir="column" display="column" top={["140rem", "140rem", "100rem", "100rem"]} id="experience">
+            <Flex marginTop="2rem" marginBottom={["2rem", "2rem", "5rem", "5rem"]} flexDir="column" textAlign="center">
                 <AppHeader marginBottom="0.5rem" color={colors.light} size="10px" text="What Technical Skills I have" type="h5" />
                 <AppHeader color={colors.primary} text="My Experience" type="h2" />
             </Flex>

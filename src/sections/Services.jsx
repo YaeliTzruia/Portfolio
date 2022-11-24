@@ -21,10 +21,10 @@ export default function Services() {
 
         <Flex w={["90%", "86%", "75%", "75%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]}
             position="absolute" flexDir="column" display="column"
-            top={["194rem", "194rem", "155rem", "160rem"]}
+            top={["205rem", "205rem", "155rem", "155rem"]}
             id="services">
             <Flex flexDir="column" marginTop="2rem" >
-                <Flex marginBottom={["0", "0", "5rem", "5rem"]} flexDir="column" textAlign="center" >
+                <Flex marginBottom={["2rem", "2rem", "5rem", "5rem"]} flexDir="column" textAlign="center" >
                     <AppHeader marginBottom="0.5rem" color={colors.light} size="10px" text="What I offer" type="h5" />
                     <AppHeader marginBottom="0.5rem" color={colors.primary} text="Services" type="h2" />
                 </Flex>

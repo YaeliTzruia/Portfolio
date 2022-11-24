@@ -25,7 +25,7 @@ export default function About() {
     return (
         <Flex w={["90%", "86%", "75%", "75%"]} justifyContent="center" height={["20vh", "20vh", "20vh", "20vh"]}
             position="absolute" flexDir="column" display="column" top="50rem" id="about">
-            <Flex textAlign="center" flexDir="column" marginTop="2rem" marginBottom={["0", "0", "5rem", "5rem"]}>
+            <Flex textAlign="center" flexDir="column" marginTop="2rem" marginBottom={["2rem", "2rem", "5rem", "5rem"]}>
                 <AppHeader marginBottom="0.5rem" color={colors.light} text="Get To Know" type="h5" size="10px" />
                 <AppHeader color={colors.primary} text="About Me" type="h2" />
             </Flex>
