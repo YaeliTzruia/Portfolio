@@ -21,7 +21,7 @@ export default function Services() {
 
         <Flex w={["90%", "86%", "75%", "75%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]}
             position="absolute" flexDir="column" display="column"
-            top={["205rem", "205rem", "155rem", "155rem"]}
+            top={["205rem", "195rem", "155rem", "155rem"]}
             id="services">
             <Flex flexDir="column" marginTop="2rem" >
                 <Flex marginBottom={["2rem", "2rem", "5rem", "5rem"]} flexDir="column" textAlign="center" >

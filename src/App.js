@@ -31,13 +31,12 @@ function App() {
         <Navbar />
         <Header />
         <About />
-
         <Experience />
         <Services />
         <Portfolio />
-        {/* <Testimonials />
+        <Testimonials />
         <Contact />
-        <Footer /> */}
+        <Footer />
       </Flex>
     </ChakraProvider>
   );

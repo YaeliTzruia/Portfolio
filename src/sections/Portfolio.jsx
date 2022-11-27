@@ -16,7 +16,7 @@ export default function Portfolio() {
         <Flex
             w={["90%", "86%", "75%", "75%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]}
             position="absolute" flexDir="column" display="column"
-            top={["260rem", "260rem", "188rem", "192rem"]}
+            top={["268rem", "250rem", "195rem", "192rem"]}
             id="services">
             <Flex flexDir="column" marginTop="2rem" >
                 <Flex marginBottom={["2rem", "2rem", "5rem", "5rem"]} flexDir="column" textAlign="center" >

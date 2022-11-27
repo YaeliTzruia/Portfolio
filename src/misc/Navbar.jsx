@@ -9,7 +9,7 @@ import { Tooltip } from '@chakra-ui/react'
 
 
 // Make a map function! 
-//mage sure the active design works!
+//make sure the active design works!
 
 export default function Navbar() {
 
