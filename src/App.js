@@ -10,7 +10,7 @@ import Experience from "./sections/Experience";
 import Services from "./sections/Services";
 import Portfolio from "./sections/Portfolio";
 import Testimonials from "./sections/Testimonials";
-import Contact from "./sections/Contact";
+import Contact from "./sections//contact/Contact";
 import Footer from "./misc/Footer";
 
 import AppButton from "./components/AppButton";
@@ -20,12 +20,12 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Flex
-        marginTop="4rem"
+        marginTop="2rem"
         w="100%"
         justifyContent="center"
         alignItems="center"
         flexDir="column"
-        paddingTop="7rem"
+        paddingTop="6rem"
         overflow="hidden"
       >
         <Navbar />

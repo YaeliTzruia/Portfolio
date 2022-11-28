@@ -51,15 +51,9 @@ svg {
   width: 1.5rem;
   height: 1.5rem;
 }
-
-/* .swiper
-  .swiper-pointer-events
-  .swiper-initialized
-  .swiper-horizontal
-  .swiper-ios
-  .swiper-backface-hidden {
-  padding-bottom: "4rem";
-} */
+*:focus {
+  outline: none;
+}
 .swiper-pagination-clickable .swiper-pagination-bullet {
   background: #4db5ff;
 }

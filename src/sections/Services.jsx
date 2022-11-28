@@ -7,11 +7,11 @@ import AppInfoCard from "../components/AppInfoCard";
 
 export default function Services() {
 
-    const randomId = Math.floor(Math.random() * 100)
+    // const randomId = Math.floor(Math.random() * 100)
     const servicesList = [
-        { icon: <BiCheck />, text: "lalala", id: randomId },
-        { icon: <BiCheck />, text: "ladfsdfdfdnflnslfxsxsxas xsxs xsxssdsds dsdsd sdsdsd dsd dsfs ds ds  dsdaras dsadas lala", id: randomId },
-        { icon: <BiCheck />, text: "lalala", id: randomId },
+        { icon: <BiCheck />, text: "lalala", id: 3321 },
+        { icon: <BiCheck />, text: "ladfsdfdfdnflnslfxsxsxas xsxs xsxssdsds dsdsd sdsdsd dsd dsfs ds ds  dsdaras dsadas lala", id: 98 },
+        { icon: <BiCheck />, text: "lalala", id: 323231 },
 
 
     ]
@@ -31,33 +31,33 @@ export default function Services() {
                 <Flex display="grid" gridTemplateColumns={[" 1fr", " 1fr", "repeat(3,1fr)", "repeat(3,1fr)"]} gap={["1.5rem", "1.5rem", "3rem", "3rem"]}>
                     <Flex _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} transition="all 400ms ease" height="fit-content" backgroundColor={colors.backgroundVariant} borderBottomRadius="2rem" borderTopRadius="0.5rem" border={`1px solid${colors.primary}`} flexDir="column">
                         <Flex marginBottom={["0.8rem", "0.8rem", "0.8rem", "1.2rem"]} justifyContent="center" borderTopRadius="0.5rem" backgroundColor={colors.primary} padding="1.5rem" borderBottomRadius="1rem" boxShadow="0 2rem 1rem rgba(0,0,0,0.1)">
-                            <AppHeader type="h3" color={colors.background} fontsize="1rem" marginBottom="0px" text="UI/UX Design" />
+                            <AppHeader type="h3" color={colors.background} fontSize="1rem" marginBottom="0px" text="UI/UX Design" />
                         </Flex>
                         {servicesList.map((data) =>
-                            <Flex paddingX={["0.5rem", "0.5rem", "1.5rem", "2rem"]} align="center" gap="1rem" marginBottom="0.8rem">
-                                <AppInfoCard textsize="0.9rem" Iconcolor={colors.primary} key={data.id} text={data.text} icon={data.icon} />
+                            <Flex key={data.id} paddingX={["0.5rem", "0.5rem", "1.5rem", "2rem"]} align="center" gap="1rem" marginBottom="0.8rem">
+                                <AppInfoCard flexDir="flex" gap="1rem" textsize="0.9rem" Iconcolor={colors.primary} key={data.id} text={data.text} icon={data.icon} />
                             </Flex>
                         )}
                     </Flex>
 
                     <Flex _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} transition="all 400ms ease" height="fit-content" backgroundColor={colors.backgroundVariant} borderBottomRadius="2rem" borderTopRadius="0.5rem" border={`1px solid${colors.primary}`} flexDir="column">
                         <Flex marginBottom={["0.8rem", "0.8rem", "0.8rem", "1.2rem"]} justifyContent="center" borderTopRadius="0.5rem" backgroundColor={colors.primary} padding="1.5rem" borderBottomRadius="1rem" boxShadow="0 2rem 1rem rgba(0,0,0,0.1)">
-                            <AppHeader type="h3" color={colors.background} fontsize="1rem" marginBottom="0px" text="Web Development" />
+                            <AppHeader type="h3" color={colors.background} fontSize="1rem" marginBottom="0px" text="Web Development" />
                         </Flex>
                         {servicesList.map((data) =>
-                            <Flex paddingX={["0.5rem", "0.5rem", "1.5rem", "2rem"]} align="center" gap="1rem" marginBottom="0.8rem">
-                                <AppInfoCard textsize="0.9rem" Iconcolor={colors.primary} key={data.id} text={data.text} icon={data.icon} />
+                            <Flex key={data.id} paddingX={["0.5rem", "0.5rem", "1.5rem", "2rem"]} align="center" gap="1rem" marginBottom="0.8rem">
+                                <AppInfoCard flexDir="flex" gap="1rem" textsize="0.9rem" Iconcolor={colors.primary} key={data.id} text={data.text} icon={data.icon} />
                             </Flex>
                         )}
                     </Flex>
 
                     <Flex _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} transition="all 400ms ease" height="fit-content" backgroundColor={colors.backgroundVariant} borderBottomRadius="2rem" borderTopRadius="0.5rem" border={`1px solid${colors.primary}`} flexDir="column">
                         <Flex marginBottom={["0.8rem", "0.8rem", "0.8rem", "1.2rem"]} justifyContent="center" borderTopRadius="0.5rem" backgroundColor={colors.primary} padding="1.5rem" borderBottomRadius="1rem" boxShadow="0 2rem 1rem rgba(0,0,0,0.1)">
-                            <AppHeader type="h3" color={colors.background} fontsize="1rem" marginBottom="0px" text="Content Creation" />
+                            <AppHeader type="h3" color={colors.background} fontSize="1rem" marginBottom="0px" text="Content Creation" />
                         </Flex>
                         {servicesList.map((data) =>
-                            <Flex paddingX={["0.5rem", "0.5rem", "1.5rem", "2rem"]} align="center" gap="1rem" marginBottom="0.8rem">
-                                <AppInfoCard textsize="0.9rem" Iconcolor={colors.primary} key={data.id} text={data.text} icon={data.icon} />
+                            <Flex key={data.id} paddingX={["0.5rem", "0.5rem", "1.5rem", "2rem"]} align="center" gap="1rem" marginBottom="0.8rem">
+                                <AppInfoCard flexDir="flex" gap="1rem" textsize="0.9rem" Iconcolor={colors.primary} key={data.id} text={data.text} icon={data.icon} />
                             </Flex>
                         )}
                     </Flex>

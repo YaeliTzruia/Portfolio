@@ -14,18 +14,18 @@ import { colors } from "../styles/colors";
 
 export default function About() {
 
-    const randomId = Math.floor(Math.random() * 100)
+    // const randomId = Math.floor(Math.random() * 100)
 
     const ExpCard = [
-        { icon: <FaAward />, header: "Experience", text: "1 Year programing", id: randomId },
-        { icon: <VscFolderLibrary />, header: "Projects", text: "1 Year programing", id: randomId },
-        { icon: <TbClipboardCheck />, header: "LinkedIn Badges", text: "1 Badge", id: randomId }
+        { icon: <FaAward />, header: "Experience", text: "1 Year programing", id: 43 },
+        { icon: <VscFolderLibrary />, header: "Projects", text: "1 Year programing", id: 1 },
+        { icon: <TbClipboardCheck />, header: "LinkedIn Badges", text: "1 Badge", id: 65 }
     ]
 
     return (
         <Flex w={["90%", "86%", "75%", "75%"]} justifyContent="center" height={["20vh", "20vh", "20vh", "20vh"]}
             position="absolute" flexDir="column" display="column" top="50rem" id="about">
-            <Flex textAlign="center" flexDir="column" marginTop="2rem" marginBottom={["2rem", "2rem", "5rem", "5rem"]}>
+            <Flex textAlign="center" flexDir="column" marginTop="2rem" marginBottom={["2rem", "2rem", "3rem", "5rem"]}>
                 <AppHeader marginBottom="0.5rem" color={colors.light} text="Get To Know" type="h5" size="10px" />
                 <AppHeader color={colors.primary} text="About Me" type="h2" />
             </Flex>
@@ -52,9 +52,11 @@ export default function About() {
                         </Grid>
                         <Flex textAlign={["center", "center", "initial", "initial"]} alignItems={["center", "center", "initial", "initial"]} flexDirection="column">
                             <Text marginTop={["1.5rem", "1.5rem", "2rem", "2rem"]} marginX="0" marginBottom={["2.6rem", "2.6rem", "1.5rem", "1.5rem"]}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
                             </Text>
+                            {/* <Flex justifyContent="flex-end"> */}
                             <AppLink height="3rem" color={colors.background} backgroundColor={colors.primary} backHoverColor={colors.white} text="Let's Talk" href="#contact" />
+                            {/* </Flex> */}
                         </Flex>
                     </Flex>
                 </Flex>

@@ -1,5 +1,4 @@
 import { Flex, Heading, Image, Text } from "@chakra-ui/react";
-import useComponents from "../hooks/useComponents";
 import { colors } from "../styles/colors";
 
 

@@ -20,7 +20,7 @@ export default function Navbar() {
     return (
         <Flex backdropFilter="blur(15px)" borderRadius="3rem" gap="0.8rem" bottom="2rem" left="50%" position="fixed" zIndex={2} paddingY="0.7rem" paddingX="1.7rem" width="fit-content" transform="translateX(-50%)" backgroundColor={colors.backgroundNav}>
             {icons.map((item) => <AppIconLink key={item.id}
-                onclick={() => {
+                onClick={() => {
                     setAcctive(item.id)
                 }} target="_self"
                 _hover={"rgba(0,0,0,0.4)"} fontSize="1.1rem" color={colors.light} backgroundColor="transparent" padding="0.8rem" href={item.href} icon={item.image} />
