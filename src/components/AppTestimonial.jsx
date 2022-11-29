@@ -8,7 +8,7 @@ export default function AppTestimonial({ display = "column", src, alt, textColor
 
         <Flex flexDir="column">
             < Flex >
-                <Image objectFit="cover" border={`0.2rem solid ${colors.primaryVariant}`} overflow="hidden" margin="0 auto 1rem" borderRadius="50%" w={["7rem", "7rem", "10rem", "10rem"]} src={src} alt={alt} />
+                <Image objectFit="cover" border={`0.2rem solid ${colors.primaryVariant}`} overflow="hidden" margin="0 auto 1rem" borderRadius="50%" w={["6rem", "6rem", "7rem", "7rem"]} src={src} alt={alt} />
             </Flex >
             <Flex alignItems="center" gap="1rem" flexDir="column">
                 <Heading fontSize={fontSize} type={type} >{name} - {title}</Heading>

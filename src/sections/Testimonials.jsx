@@ -31,17 +31,18 @@ export default function Testimonials() {
     return (
 
         <Flex w={["90%", "86%", "75%", "60%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]}
-            position="absolute" flexDir="column" display="column" top={["303rem", "288rem", "225rem", "245rem"]} id="testimonials">
-            <Flex marginTop="2rem" marginBottom={["2rem", "2rem", "5rem", "5rem"]} flexDir="column" textAlign="center">
+            position="absolute" flexDir="column" display="column" top={["210rem", "210rem", "175rem", "200rem"]} id="testimonials">
+            <Flex marginTop="2rem" marginBottom={["2rem", "2rem", "2.5rem", "5rem"]} flexDir="column" textAlign="center">
                 <AppHeader marginBottom="0.5rem" color={colors.light} size="10px" text="Review Testimonials" type="h5" />
                 <AppHeader color={colors.primary} text="Recomendations" type="h2" />
             </Flex>
             <Flex justifyContent="center">
 
                 <Swiper
+
                     className="swiper-pointer-events"
                     modules={[Pagination]}
-                    spaceBetween={40}
+                    spaceBetween={1}
                     slidesPerView={1}
                     transition="all 600ms ease"
                     pagination={{ clickable: true }}
@@ -51,7 +52,7 @@ export default function Testimonials() {
                     <Flex width={["98%", "98%", "70%", "60%"]} flexDir="column">
                         {recomends.map((data) =>
                             <SwiperSlide key={data.id} className="slider"  >
-                                <Flex onClick={() => swiper.slideNext()} gap="1.5rem" alignItems="center" backgroundColor={colors.backgroundVariant} height={["43rem", "40rem", "30rem", "28rem"]} textAlign="center" padding="1.5rem" borderRadius="1rem" userSelect="none" flexDir="column">
+                                <Flex marginLeft={[null, null, "10.3rem", "16rem"]} width={[null, null, "40rem", "40rem"]} onClick={() => swiper.slideNext()} gap={["1.5rem", "1.5rem", "1.5rem", "0.7rem"]} alignItems="center" backgroundColor={colors.backgroundVariant} height={["40rem", "37rem", "30rem", "28rem"]} textAlign="center" padding="1.5rem" borderRadius="1rem" userSelect="none" flexDir="column">
                                     <AppTestimonial key={data.id} alt={data.alt} src={data.src} text={data.text} name={data.name} title={data.title} />
                                     {data.downloadFile ? <AppLink paddingX="0.6rem" paddingY="0.6rem" fontSize="12px" color={colors.primary} backgroundColor={colors.background} hoverColor={colors.background} backHoverColor={colors.white} text="Download Recomendation" href={data.href} download={data.download} /> : null}
 

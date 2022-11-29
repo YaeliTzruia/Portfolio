@@ -6,7 +6,7 @@ import { useFormik } from "formik";
 import { colors } from '../../styles/colors';
 import AppButtonPrimary from '../../components/AppButtonPrimary';
 import { validationShema } from '../../data/validationSchema';
-import { useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 
 
 
@@ -32,19 +32,7 @@ export default function DisplayForm() {
 
 
     }
-    function toastError(error) {
 
-        toastIdRef.current = toast({
-            description: 'some text', position: 'top-center', render: () => (
-                <Box marginTop="10rem" textAlign="center" color='white' p={3} bg={colors.primaryVariant} borderRadius="0.6rem" border={`1px solid ${colors.primary}`}>
-                    <Heading fontSize="1rem" as="h3">Something Went Wrong</Heading>
-                    <Text fontSize="0.8rem">{error}</Text>
-                </Box>
-            ),
-        })
-
-
-    }
 
     const handleLimitChange = (event) => {
         if (characterLimit - event.target.value.length >= 0) {
@@ -72,6 +60,7 @@ export default function DisplayForm() {
 
                 resetForm({ values: "" });
                 toastSuccsess()
+                setContent("");
                 console.log(values)
                 setIsSubmitting(false);
                 setMessageSent(true)
@@ -100,13 +89,13 @@ export default function DisplayForm() {
             >
                 <Input
                     _invalid={{ border: "2px solid #a90909" }}
-                    autocomplete="off"
+                    autoComplete="off"
                     onChange={formik.handleChange}
                     value={formik.values.name}
                     _hover={{ border: "2px solid transparent" }}
                     border="2px solid transparent"
-                    padding="1.5rem"
-                    w="30rem"
+                    padding="1rem"
+                    w="22rem"
                     _focus={{ border: "2px solid transparent", outline: "none" }}
                     placeholder=" "
                     name="name"
@@ -131,12 +120,13 @@ export default function DisplayForm() {
                 }
             >
                 <Input
-                    autocomplete="off"
+                    autoComplete="off"
                     _invalid={{ border: "2px solid #a90909" }}
                     value={formik.values.email}
                     _hover={{ border: "2px solid transparent" }}
                     border="2px solid transparent"
-                    padding="1.5rem"
+                    padding="1rem"
+                    w="22rem"
                     type="email"
                     _focus={{ backgroundColor: colors.background, border: "2px solid transparent", outline: "none" }}
                     placeholder=" "
@@ -152,7 +142,7 @@ export default function DisplayForm() {
 
             <FormControl
 
-                marginBottom="1.2rem"
+                marginBottom="0.5rem"
                 borderRadius="0.5rem"
                 border={`2px solid ${colors.primaryVariant}`}
                 variant="floating"
@@ -165,13 +155,13 @@ export default function DisplayForm() {
             >
                 <Textarea
                     _invalid={{ border: "2px solid #a90909" }}
-                    autocomplete="off"
+                    autoComplete="off"
                     value={content}
                     resize="none"
                     _hover={{ border: "2px solid transparent" }}
                     border="2px solid transparent"
                     padding="1.5rem"
-                    h="20rem"
+                    h="15rem"
                     _focus={{ border: "1px solid transparent", outline: "none" }}
                     placeholder=" "
                     name="message"
@@ -189,11 +179,11 @@ export default function DisplayForm() {
 
             </FormControl>
             {isDisabled ? (
-                <Text fontSize="15px" color="#b53e3e">
+                <Text fontSize="13px" color="#b53e3e">
                     Can't contain more then 500 chars.
                 </Text>
             ) : (
-                <Text w="100%" fontSize="15px">
+                <Text color={colors.primaryLight} w="100%" fontSize="13px">
                     Remaining{" "}
                     {characterLimit - content.length}
                     {` characters`}
@@ -203,6 +193,10 @@ export default function DisplayForm() {
 
             <Flex justifyContent="flex-end">
                 <AppButtonPrimary
+                    size="sm"
+                    display="flex"
+                    loadingText="Sending"
+                    isLoading={isSubmitting}
                     isDisabled={content.length === 499}
                     justifyContent="center"
                     alignItems="center"
