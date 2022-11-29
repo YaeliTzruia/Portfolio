@@ -25,7 +25,7 @@ export default function Contact() {
     return (
         <>
             <Flex alignItems="center" w={["90%", "86%", "75%", "58%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]}
-                position="absolute" flexDir="column" display="column" top={["265rem", "260rem", "225rem", "250rem"]} id="contact">
+                position="absolute" flexDir="column" display="column" top={["265rem", "267rem", "225rem", "250rem"]} id="contact">
 
                 <Flex marginTop="2rem" marginBottom={["2rem", "2rem", "3rem", "5rem"]} flexDir="column" textAlign="center">
                     <AppHeader marginBottom="0.5rem" color={colors.light} size="10px" text="Get In Touch" type="h5" />

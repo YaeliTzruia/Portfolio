@@ -2,6 +2,7 @@ import React from "react";
 import { ChakraProvider, Flex } from "@chakra-ui/react";
 
 import "./styles/style.css";
+import background from "./assets/code.jpg";
 import Header from "./sections/Header";
 import Navbar from "./misc/Navbar";
 import theme from "./styles/themes";
@@ -36,6 +37,7 @@ function App() {
         <Portfolio />
         <Testimonials />
         <Contact />
+        <Footer />
         <Footer />
       </Flex>
     </ChakraProvider>

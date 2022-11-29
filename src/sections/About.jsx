@@ -1,7 +1,9 @@
-import { Flex, Grid, Link, Text } from "@chakra-ui/react";
+import { Flex, Grid, Link, Stack, Text } from "@chakra-ui/react";
+import AOS from "aos";
+
 import AppHeader from "../components/AppHeader"
 import AppImage from "../components/AppImage";
-import me from "../assets/surf.jpeg"
+import me from "../assets/coffee.jpg"
 import AppInfoCard from "../components/AppInfoCard";
 
 import { FaAward } from "react-icons/fa";
@@ -10,11 +12,16 @@ import { TbClipboardCheck } from "react-icons/tb";
 
 import AppLink from "../components/AppLink";
 import { colors } from "../styles/colors";
+import { useEffect } from "react";
 
 
 export default function About() {
 
     // const randomId = Math.floor(Math.random() * 100)
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     const ExpCard = [
         { icon: <FaAward />, header: "Experience", text: "1 Year programing", id: 43, href: "#experience" },
@@ -32,7 +39,7 @@ export default function About() {
             <Flex alignItems="center" display="grid" gridTemplateColumns={["1fr", "1fr", "40% 50%", "30% 50%"]} gap={["0", "0", "15%", "15%"]} >
                 <Flex margin={["0rem 1rem 4rem", "0rem 1.5rem 4rem", "2rem auto 4rem", "0"]} borderRadius="2rem" className="about_me" >
                     {/* w={["70%", "70%", "100%", "90%"]}  */}
-                    <AppImage transition="all 400ms ease" _hover={{ transform: "rotate(0)" }} borderRadius="2rem" overflow="hidden" transform="rotate(10deg)" image={me} alt="profile image about me" />
+                    <AppImage height={["17rem", "17rem", "24rem", "27rem"]} transition="all 400ms ease" _hover={{ transform: "rotate(0)" }} borderRadius="2rem" overflow="hidden" transform="rotate(10deg)" image={me} alt="coffee and computer" />
                 </Flex>
                 <Flex display="column" >
                     <Flex display="column">
@@ -57,8 +64,12 @@ export default function About() {
 
                         </Grid>
                         <Flex textAlign={["center", "center", "initial", "initial"]} alignItems={["center", "center", "initial", "initial"]} flexDirection="column">
-                            <Text fontSize={["0.8rem", "0.8rem", "0.8rem", "1rem"]} marginTop="2rem" marginX="0" marginBottom={["1.5rem", "1.5rem", "1.5rem", "1.5rem"]}>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised. known printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised. known printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                            <Text fontSize={["0.8rem", "0.8rem", "0.8rem", "1rem"]} marginTop="2rem" marginX="0" marginBottom={["1.5rem", "1.5rem", "1rem", "1rem"]}>
+                                My name is Yael Tzruia and I'm a full-stack developer based in Netivot, Israel. I studied full-stack at ITC for 7 months, ending my course with a two-month internship at Sue-App where I got the opportunity to create their website from scratch. Throughout this year I have made several different projects including platforms with user interfaces, tokens, and MongoDB as a database.
+                            </Text>
+                            <Text marginBottom={["1.5rem", "1.5rem", "1.5rem", "1.5rem"]} fontSize={["0.8rem", "0.8rem", "0.8rem", "1rem"]}>
+
+                                I’m passionate about what I do and want to spend every day enhancing this creative side of mine - to push myself to be the best I can be.
                             </Text>
                             <AppLink fontSize="12px" paddingY="0.5rem" paddingX="0.7rem" color={colors.background} backgroundColor={colors.primary} backHoverColor={colors.white} text="Let's Talk" href="#contact" />
                         </Flex>

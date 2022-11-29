@@ -13,11 +13,11 @@ html {
   display: none;
 }
 
-:root {
+/* :root {
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
-}
+} */
 
 body {
   line-height: 1.5;
@@ -34,8 +34,15 @@ h5 {
 }
 
 svg {
-  width: 1.05rem;
-  height: 1.05rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.me {
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .me-pic {
@@ -43,7 +50,12 @@ svg {
 }
 .about_me {
   aspect-ratio: 1/1;
-  background: linear-gradient(45deg, transparent, #4db5ff, transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(77, 181, 255, 0.4),
+    transparent
+  );
   display: grid;
   place-items: center;
 }
@@ -61,6 +73,14 @@ div .swiper-horizontal .swiper-pagination-bullets,
 .swiper-pagination-fraction {
   justify-content: center;
   align-items: center;
+}
+div.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  width: 0%;
+  margin-top: 1rem;
+}
+div.swiper-pointer-events {
+  padding-bottom: 3rem;
 }
 .swiper-pagination-clickable .swiper-pagination-bullet {
   background: #4db5ff;

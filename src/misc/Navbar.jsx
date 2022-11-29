@@ -30,7 +30,7 @@ export default function Navbar() {
                     onClick={() => {
                         setAcctive(item.id)
                     }} target="_self"
-                    _hover={"rgba(0,0,0,0.4)"} fontSize="1.1rem" color={colors.light} backgroundColor="transparent" padding="0.8rem" href={item.href} icon={item.image} />
+                    _hover={{ backgroundColor: "rgba(0,0,0,0.4)" }} fontSize="1.1rem" color={colors.light} backgroundColor="transparent" padding="0.8rem" href={item.href} icon={item.image} />
                 // </Tooltip>
             )}
 

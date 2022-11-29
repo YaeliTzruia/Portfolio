@@ -1,4 +1,4 @@
-import { Divider, Flex, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { Flex, Link } from "@chakra-ui/react";
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 
 import "../styles/style.css"
@@ -6,12 +6,17 @@ import AppHeader from "../components/AppHeader";
 import CTA from "./CTA";
 import { colors } from "../styles/colors";
 import profileImage from "../assets/profileImg.jpeg"
-// import profileImage from "../assets/profilepic.png"
-// import profileImage from "../assets/me2.png"
 import AppImage from "../components/AppImage";
+import code from "../assets/code.jpg"
 import AppIconLink from "../components/AppIconLink";
 
+
+
+
 export default function Header() {
+
+
+
 
     return (
 
@@ -28,13 +33,21 @@ export default function Header() {
 
 
                 </Flex>
-                <Flex justifyContent="center" overflow="hidden" bgGradient='linear(to-b, primary, transparent)' className="me" position="absolute" borderRadius="60%" marginTop="3rem" height="19rem" width="19rem" left="calc(50% -11rem)">
-                    <AppImage marginLeft="0.1rem" paddingBottom="1.5rem" height="28rem" width="20rem" objectFit="cover" image={profileImage} position="absolute" alt="profile image" />
+                <Flex zIndex={2} _hover={{ transform: "rotate(360deg)", transition: "0.5s ease", opacity: 0.25 }} justifyContent="center" overflow="hidden" bgGradient='linear(to-b, primary, transparent)' className="me" position="absolute" borderRadius="60%" marginTop="3rem" height="19rem" width="19rem" left="calc(50% -11rem)">
+                    <AppImage transition="0.5s ease" zIndex={2} marginLeft="0.1rem" paddingBottom="1.5rem" height="28rem" width="20rem" image={code} objectFit="cover" position="absolute" alt="profile image" />
+
+
 
                 </Flex>
+                <Flex justifyContent="center" overflow="hidden" bgGradient='linear(to-b, primary, transparent)' className="me" position="absolute" borderRadius="60%" marginTop="3rem" height="19rem" width="19rem" left="calc(50% -11rem)">
+
+                    <AppImage zIndex={1} marginLeft="0.1rem" paddingBottom="1.5rem" height="28rem" width="20rem" objectFit="cover" image={profileImage} position="absolute" alt="profile image" />
+
+                </Flex>
+
                 <Link display={["none", "none", "flex", "flex"]} color={colors.primary} fontWeight={300} fontSize="0.9rem" position="absolute" right="-2.3rem" top="25rem" transform="rotate(90deg)" href="#contact">Scroll Down</Link>
             </Flex>
-        </Flex>
+        </Flex >
 
     )
 }

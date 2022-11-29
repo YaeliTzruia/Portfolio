@@ -31,7 +31,7 @@ export default function Testimonials() {
     return (
 
         <Flex w={["90%", "86%", "75%", "60%"]} justifyContent="center" height={["100vh", "100vh", "68vh", "100%"]}
-            position="absolute" flexDir="column" display="column" top={["210rem", "210rem", "175rem", "200rem"]} id="testimonials">
+            position="absolute" flexDir="column" display="column" top={["210rem", "215rem", "175rem", "200rem"]} id="testimonials">
             <Flex marginTop="2rem" marginBottom={["2rem", "2rem", "2.5rem", "5rem"]} flexDir="column" textAlign="center">
                 <AppHeader marginBottom="0.5rem" color={colors.light} size="10px" text="Review Testimonials" type="h5" />
                 <AppHeader color={colors.primary} text="Recomendations" type="h2" />

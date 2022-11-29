@@ -46,11 +46,11 @@ export default function Experience() {
             <Flex width="100%" justifyContent={["center", "center", "center", "center"]}>
                 <Flex width={["100%", "100%", "100%", "90%"]} display="grid" gridTemplateColumns={["1fr", "1fr", "1fr 1fr", "1fr 1fr"]} gap="2rem">
 
-                    <Flex transition="all 400ms ease" _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} backgroundColor={colors.backgroundVariant} paddingY={["2rem", "2rem", "2.4rem", "2.4rem"]} paddingX={["1rem", "1rem", "5rem", "5rem"]} borderRadius="2rem" border="1px solid transparent" flexDir="column">
+                    <Flex transition="all 400ms ease" _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} backgroundColor={colors.backgroundVariant} paddingY={["2rem", "2rem", "1.5rem", "2.4rem"]} paddingX={["1rem", "1rem", "5rem", "5rem"]} borderRadius="2rem" border="1px solid transparent" flexDir="column">
 
                         <AppHeader color={colors.primary} textAlign="center" marginBottom="2rem" text="Frontend Development" fontSize={["10px", "10px", "15px", "15px"]} type="h3" />
 
-                        <Flex display="grid" gridTemplateColumns="1fr 1fr" rowGap={["1rem", "1rem", "2rem", "2rem"]} flexDir="column">
+                        <Flex display="grid" gridTemplateColumns="1fr 1fr" rowGap={["1rem", "1rem", "1rem", "2rem"]} flexDir="column">
                             {FrontExpData.map((data) =>
                                 <Flex key={data.id} gap="1rem">
                                     <AppInfoCard justifyContent="center" gap="0.4rem" widthIcon={["1rem", "1rem", "2rem", "2rem"]} textsize={["10px", "10px", "12px", "12px"]} Iconcolor={colors.primary} type="h3" fontSize={["11px", "11px", "15px", "15px"]} icon={data.icon} header={data.language} text={data.level} key={data.id} />
@@ -60,11 +60,11 @@ export default function Experience() {
                         </Flex>
                     </Flex>
                     <Flex
-                        transition="all 400ms ease" _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} backgroundColor={colors.backgroundVariant} paddingY={["2rem", "2rem", "2.4rem", "2.4rem"]} paddingX={["1rem", "1rem", "5rem", "5rem"]} borderRadius="2rem" border="1px solid transparent" flexDir="column" >
+                        transition="all 400ms ease" _hover={{ backgroundColor: "transparent", border: `1px solid ${colors.primaryVariant}`, cursor: "default" }} backgroundColor={colors.backgroundVariant} paddingY={["2rem", "2rem", "1.5rem", "2.4rem"]} paddingX={["1rem", "1rem", "5rem", "5rem"]} borderRadius="2rem" border="1px solid transparent" flexDir="column" >
 
                         <AppHeader color={colors.primary} textAlign="center" marginBottom="2rem" textsize="10px" text="Backend Development" type="h4" />
 
-                        <Flex display="grid" gridTemplateColumns="1fr 1fr" rowGap={["1rem", "1rem", "2rem", "2rem"]} flexDir="column">
+                        <Flex display="grid" gridTemplateColumns="1fr 1fr" rowGap={["1rem", "1rem", "1rem", "2rem"]} flexDir="column">
                             {BackExpData.map((data) =>
                                 <Flex key={data.id} gap="1rem">
                                     <AppInfoCard justifyContent="center" gap="0.4rem" widthIcon={["1rem", "1rem", "2rem", "2rem"]} textsize={["10px", "10px", "12px", "12px"]} Iconcolor={colors.primary} type="h3" fontSize={["11px", "11px", "15px", "15px"]} icon={data.icon} header={data.language} text={data.level} key={data.id} />
