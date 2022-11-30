@@ -8,7 +8,7 @@ export default function Portfolio() {
 
     // const randomId = Math.floor(Math.random() * 100)
     const projectList = [
-        { id: 211, header: 'Sue App', src: sueApp, alt: "Sue-App", textOne: "Github", textTwo: "Live Demo", hrefOne: "https://github.com/YaeliTzruia/SueApp", hrefTwo: "", disabeld: 'true' },
+        { id: 211, header: 'Sue App', src: sueApp, alt: "Sue-App", textOne: "Github", textTwo: "Live Demo", desc: "Responsive design for desktops 1920px, mobile (android and IOS)", hrefOne: null, hrefTwo: "http://sue-app.com" },
 
     ]
 
@@ -26,7 +26,7 @@ export default function Portfolio() {
                 <Flex gridTemplateColumns={["1fr", "1fr", "repeat(3,1fr)", "repeat(3,1fr)"]} gap={["1rem", "1rem", "2.5rem", "2.5rem"]} display="grid">
                     {projectList.map((data) =>
                         <Flex key={data.id} backgroundColor={colors.backgroundVariant} padding={["1rem", "1rem", "1.2rem", "1.2rem"]} borderRadius="2rem" border="1px solid transparent" transition="all 400ms ease" _hover={{ border: `1px solid ${colors.primaryVariant}`, backgroundColor: "transparent" }}>
-                            <AppProjectCont header={data.header} src={data.src} alt={data.alt} disabeld={data.disabeld} textOne={data.textOne} hrefOne={data.hrefOne} hrefTwo={data.hrefTwo} textTwo={data.textTwo} key={data.id} />
+                            <AppProjectCont desc={data.desc} header={data.header} src={data.src} alt={data.alt} textOne={data.textOne} hrefOne={data.hrefOne} hrefTwo={data.hrefTwo} textTwo={data.textTwo} key={data.id} />
                         </Flex>
                     )}
                 </Flex>

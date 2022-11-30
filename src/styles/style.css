@@ -93,6 +93,9 @@ div.swiper-pointer-events {
   display: inline-block;
   /* border-bottom: 1px dotted black; */
 }
+.tooltip svg {
+  width: 1rem;
+}
 
 .tooltip .tooltiptext {
   visibility: hidden;

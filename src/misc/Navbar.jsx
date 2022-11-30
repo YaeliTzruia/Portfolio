@@ -23,14 +23,14 @@ export default function Navbar() {
         { image: <BiMessageSquareDetail />, id: 50, href: "#contact", name: "Contact" }]
 
     return (
-        <Flex backdropFilter="blur(15px)" borderRadius="3rem" gap="0.8rem" bottom="2rem" left="50%" position="fixed" zIndex={2} paddingY="0.7rem" paddingX="1.7rem" width="fit-content" transform="translateX(-50%)" backgroundColor={colors.backgroundNav}>
+        <Flex backdropFilter="blur(15px)" borderRadius="3rem" gap="0.8rem" bottom="2rem" left="50%" position="fixed" zIndex={4} paddingY={["0.3rem", "0.3rem", "0.5rem", "0.7rem"]} paddingX={["1rem", "1rem", "1rem", "1.7rem"]} width="fit-content" transform="translateX(-50%)" backgroundColor={colors.backgroundNav}>
             {icons.map((item) =>
                 // <Tooltip zIndex={3} label={item.name} bg='gray.300' color='black'>
                 <AppIconLink name={item.name} key={item.id}
                     onClick={() => {
                         setAcctive(item.id)
                     }} target="_self"
-                    _hover={{ backgroundColor: "rgba(0,0,0,0.4)" }} fontSize="1.1rem" color={colors.light} backgroundColor="transparent" padding="0.8rem" href={item.href} icon={item.image} />
+                    _hover={{ backgroundColor: "rgba(0,0,0,0.4)" }} size={["1.1rem", "1.1rem", "0.5rem", "1.1rem",]} color={colors.light} backgroundColor="transparent" padding="0.8rem" href={item.href} icon={item.image} />
                 // </Tooltip>
             )}
 

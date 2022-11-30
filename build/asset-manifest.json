@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0b0b899b.css",
+    "main.js": "/static/js/main.56ed1341.js",
+    "static/media/code.jpg": "/static/media/code.bf2fbe684d71f69b35eb.jpg",
+    "static/media/coffee.jpg": "/static/media/coffee.c9f6ad8434299ce15e76.jpg",
+    "static/media/profileImg.jpeg": "/static/media/profileImg.e7e30afa8da7a6ae01e4.jpeg",
+    "static/media/tom.png": "/static/media/tom.87366479f49f8d7941dd.png",
+    "static/media/Yael Tzruia resume.pdf": "/static/media/Yael Tzruia resume.49bc8e6e0cfe6b958117.pdf",
+    "static/media/sueApp.jpeg": "/static/media/sueApp.9e4721341d2f053ca35d.jpeg",
+    "static/media/isabella.jpeg": "/static/media/isabella.8bb16962a4242cbd72f9.jpeg",
+    "static/media/Yael letter.pdf": "/static/media/Yael letter.e40f63420912d8304860.pdf",
+    "static/media/CartoonImg.webp": "/static/media/CartoonImg.24fbc5b939320a8f7900.webp",
+    "index.html": "/index.html",
+    "main.0b0b899b.css.map": "/static/css/main.0b0b899b.css.map",
+    "main.56ed1341.js.map": "/static/js/main.56ed1341.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b0b899b.css",
+    "static/js/main.56ed1341.js"
+  ]
+}
